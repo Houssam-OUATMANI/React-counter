@@ -18,15 +18,16 @@ export default class Increment extends Component {
         <h1>{this.state.value}</h1>
         <button
           onClick={() => this.incrementValue()}
-          className="btn btn-primary btn-lg m-5 p-5"
+          className="btn btn-primary btn-lg m-2 p-3"
         >
-          Increment
+          Increment +
         </button>
         <button
           onClick={() => this.decrementValue()}
-          className="btn btn-danger btn-lg p-5 m-5"
+          className="btn btn-danger btn-lg p-3"
+          disabled={this.state.value === 0 ? "disabled" : ""}
         >
-          Decrement
+          Decrement -
         </button>
       </Fragment>
     );
